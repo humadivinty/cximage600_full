@@ -16,14 +16,16 @@
 ////////////////////////////////////////////////////////////////////////////////
 // memory allocation; data must be zeroed
 static mng_ptr
-mymngalloc( mng_uint32 size )
+//mymngalloc( mng_uint32 size )
+mymngalloc(mng_size_t size)
 {
 	return (mng_ptr)calloc(1, size);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // memory deallocation
-static void mymngfree(mng_ptr p, mng_uint32 size)
+//static void mymngfree(mng_ptr p, mng_uint32 size)
+static void mymngfree(mng_ptr p, mng_size_t size)
 {
 	free(p);
 }
